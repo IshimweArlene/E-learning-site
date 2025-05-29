@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MyImage from '../students.png';
+import MyImage from '../assets/Students';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {

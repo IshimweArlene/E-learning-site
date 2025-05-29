@@ -1,54 +1,63 @@
 import React from 'react';
+import girl from '../assets/girl.png'
+import { BsPlayFill} from "react-icons/bs";
+import { FaRegCalendarAlt } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import { BarChart2, UserCircle } from 'lucide-react';
+import { FaUserCircle } from 'react-icons/fa';
 
 const LandingHero = () => {
   return (
-    <div className="relative bg-[#49BBBD] w-full overflow-hidden" style={{ minHeight: '480px' }}>
-      {/* Curved white bottom */}
-      <svg className="absolute bottom-0 left-0 w-full" height="80" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 Q720,120 1440,40 L1440,80 L0,80 Z" fill="#fff" />
-      </svg>
-      <div className="relative z-10 flex flex-row items-center justify-between max-w-7xl mx-auto px-12 pt-12 pb-24">
-        {/* Left Side */}
-        <div className="flex-1 flex flex-col justify-center text-white">
-          <h1 className="text-4xl font-bold leading-tight mb-4">
-            <span className="text-[#FFB800]">Studying</span> Online is now<br />much easier
-          </h1>
-          <p className="mb-6 text-lg text-white/90 max-w-md">
-            TOTC is an interesting platform that will teach you in more an interactive way
-          </p>
-          <div className="flex items-center space-x-4 mb-8">
-            <button className="bg-white text-[#49BBBD] font-bold px-6 py-3 rounded-full shadow hover:bg-[#eaf4ff] transition">Join for free</button>
-            <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow hover:bg-[#eaf4ff] transition">
-              <svg width="24" height="24" fill="none" stroke="#49BBBD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="8,5 19,12 8,19" /></svg>
-            </button>
-            <span className="text-white font-medium">Watch how it works</span>
-          </div>
+    <div>
+      <div className="relative bg-[#49BBBD] w-full overflow-hidden " style={{ minHeight: '671px' }}>
+        {/* Curved white bottom */}
+        <svg className="absolute bottom-0 left-0 w-full" height="80" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,0 Q720,80 1440,0 L1440,80 L0,80 Z" fill="#fff" />
+        </svg>
+        <div className='relative'>
+        <div className='mb-6 ml-24'>
+          <h2 className='text-5xl font-bold mb-6 mt-36 '>
+            <span className='text-orange-400'>Studying</span><span className='text-white mb-2'> Online is now <br/> much easier</span>
+          </h2>
+          <p className='text-slate-50  text-xl'>TOTC is an interesting platform that will teach <br/> you in a more interactive way</p>
         </div>
-        {/* Right Side */}
-        <div className="flex-1 flex items-center justify-end relative">
-          {/* Student Image */}
-          <img src="https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&w=300&h=400&fit=crop" alt="Student" className="w-80 h-96 object-cover rounded-2xl z-10" />
-          {/* Floating Cards */}
-          <div className="absolute left-0 top-8 bg-white rounded-xl shadow px-6 py-3 flex flex-col items-center" style={{ minWidth: '120px' }}>
-            <span className="text-[#49BBBD] font-bold text-lg">250k</span>
-            <span className="text-gray-500 text-xs">Assisted Student</span>
+        <div className='mb-6 ml-28 flex flex-row items-center space-x-8'>
+          <button className='text-gray-100 text-xl bg-[#82f1f3] w-40 h-16 rounded-full'>
+            Join for Free
+          </button>
+          <button className='rounded-full bg-white w-16 h-16 relative'>
+            <BsPlayFill className='text-blue-400 text-4xl absolute left-4 top-4 ' />
+          </button><span className='text-lg'>Watch how it works</span>
+        </div>
+        </div>
+        <div className='absolute top-6 right-44'>
+          <div>
+            <img src={girl} className='w-[580px] h-[600px]'/>
           </div>
-          <div className="absolute right-0 top-4 bg-white rounded-xl shadow px-4 py-2 flex items-center space-x-2">
-            <span className="bg-[#FFB800] rounded-full w-6 h-6 flex items-center justify-center">
-              <svg width="16" height="16" fill="none" stroke="#fff" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" /></svg>
-            </span>
-            <span className="text-gray-700 text-xs font-medium">Congratulations<br /><span className="text-gray-400">Your admission completed</span></span>
+
+          <div className=' flex w-64 py-4 bg-white opacity-90 items-center justify-center rounded-2xl absolute top-14 -left-12'>
+           <FaRegCalendarAlt className="w-14 h-14 text-slate-200 bg-blue-400 rounded-xl mr-4 p-2" />
+           <p className='text-lg'> <span className='font-semibold'>250k </span><br/> Assisted students</p>
           </div>
-          <div className="absolute left-1/2 bottom-0 bg-white rounded-xl shadow px-4 py-2 flex items-center space-x-2" style={{ transform: 'translateX(-50%) translateY(60%)' }}>
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" className="w-8 h-8 rounded-full object-cover" />
-            <div>
-              <span className="block text-gray-700 text-xs font-medium">User Experience Class</span>
-              <span className="block text-gray-400 text-xs">Today at 12.00 PM</span>
+          
+          <div className='flex w-80 py-5 bg-white opacity-90 items-center justify-center rounded-xl absolute -right-20 bottom-64'>
+            <MdEmail className='bg-orange-400 text-slate-100 w-14 h-14 p-2 rounded-xl'/>
+            <p className='text-lg ml-2'><span className='font-semibold'>Congratulations</span> <br/> Your admission completed</p>
+          </div>
+
+          <div className='flex w-16 py-3 h-16 bg-pink-600 opacity-55 items-center justify-center rounded-xl absolute -right-20 top-40'>
+            <BarChart2 className=' bg-white w-12 h-12 rounded-lg text-pink-600 '/>
+          </div>
+
+          <div className='flex w-80 py-4 h-32 bg-white opacity-90 items-center justify-center rounded-2xl absolute -left-14 bottom-20'>
+            <UserCircle size={48} color='cyan' className='absolute left-2 top-2'/>
+            <div className='flex flex-col space-y-4'>
+             <p className='text-gray-800'><span className='font-semibold text-xl mb-6'>User Experience Class</span> <br/>Today at 12.00 PM</p>
+             <button className='bg-pink-600 opacity-55 w-28 h-10 rounded-2xl text-white'>Join now</button>
             </div>
-            <button className="ml-2 px-3 py-1 rounded-full bg-[#FF6680] text-white text-xs font-semibold">Join Now</button>
           </div>
         </div>
-      </div>
+      </div>   
     </div>
   );
 };
